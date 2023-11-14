@@ -1,0 +1,125 @@
+$f1: 80px; // 阿拉伯数字信息，如：金额、时间等
+$f2: 40px; // 页面大标题，如：结果、控状态等信息单一页面
+$f3: 36px; // 大按钮字体
+$f4: 34px; // 首要层级信息，基准的，可以是连续的，如：列表标题、消息气泡
+$f5: 28px; // 次要描述信息，服务于首要信息并与之关联，如：列表摘要
+$f6: 26px; // 辅助信息，需弱化的内容，如：链接、小按钮
+$f7: 22px; // 说明文本，如：版权信息等不需要用户关注的信息
+$f8: 18px; // 十分小
+
+$color-primary: #ff9800;
+$color-secondary: lighten($color-primary, 10%);
+$color-tertiary: lighten($color-primary, 20%);
+$color-line: #ececec;
+$color-bg: #ebebeb;
+
+$color-text-primary: #000000; // 主内容
+$color-text-long: #353535; // 大段说明的主要内容
+$color-text-secondary: #888888; // 次要内容
+$color-text-placeholder: #b2b2b2; // 缺省值
+
+$color-link-normal: #576b96; // 链接用色
+$color-link-press: lighten($color-link-normal, 10%);
+$color-link-disable: lighten($color-link-normal, 20%);
+
+$color-complete-normal: $color-primary; // 完成用色
+$color-complete-press: lighten($color-complete-normal, 10%);
+$color-complete-disable: lighten($color-complete-normal, 20%);
+
+$color-success-normal: #09bb07; // 成功用色
+$color-success-press: lighten($color-success-normal, 10%);
+$color-success-disable: lighten($color-success-normal, 20%);
+
+$color-error-normal: #e64340; // 出错用色
+$color-error-press: lighten($color-error-normal, 10%);
+$color-error-disable: lighten($color-error-normal, 20%);
+
+$color-course-arts: #ff5d00;
+$color-course-eng: #7a9aad;
+$color-course-environment: #979700;
+$color-course-proserv: #036;
+$color-course-foundation: #ca0064;
+$color-course-science: #00914d;
+$color-course-socialscience: #911eb3;
+$color-course-lang: #cccccc;
+
+.color-course {
+  .CSC-CELE,
+  .CSC-EDU,
+  .CSC-IC,
+  .CSC-IS {
+    background-color: $color-course-arts;
+    // @include ripple($color-course-arts);
+  }
+  .CSC-ABE,
+  .CSC-CEE,
+  .CSC-CIVE,
+  .CSC-EEE,
+  .CSC-MMME,
+  .CSC-CS,
+  .CSC-GEOG {
+    background-color: $color-course-science;
+    // @include ripple($color-course-science);
+  }
+  .CSC-NUBS,
+  .CSC-CCS,
+  .CSC-ECON,
+  .CSC-EDEN,
+  .CSC-ENGL {
+    background-color: $color-course-socialscience;
+    // @include ripple($color-course-socialscience);
+  }
+  .CSC-AERO,
+  .CSC-MATH {
+    background-color: $color-course-eng;
+    // @include ripple($color-course-eng);
+  }
+  .CSC-LANG {
+    background-color: $color-course-lang;
+  }
+  .UNNC {
+    background-color: $color-course-proserv;
+    // @include ripple($color-course-proserv);
+  }
+}
+
+.color-course-tag {
+  .CSC-CELE,
+  .CSC-EDU,
+  .CSC-IC,
+  .CSC-IS {
+    border: 1px solid $color-course-arts;
+    color: $color-course-arts;
+  }
+  .CSC-ABE,
+  .CSC-CEE,
+  .CSC-CIVE,
+  .CSC-EEE,
+  .CSC-MMME,
+  .CSC-CS,
+  .CSC-GEOG {
+    border: 1px solid $color-course-science;
+    color: $color-course-science;
+  }
+  .CSC-NUBS,
+  .CSC-CCS,
+  .CSC-ECON,
+  .CSC-EDEN,
+  .CSC-ENGL {
+    border: 1px solid $color-course-socialscience;
+    color: $color-course-socialscience;
+  }
+  .CSC-AERO,
+  .CSC-MATH {
+    border: 1px solid $color-course-eng;
+    color: $color-course-eng;
+  }
+  .CSC-LANG {
+    border: 1px solid $color-course-lang;
+    color: $color-course-lang;
+  }
+  .UNNC {
+    border: 1px solid $color-course-proserv;
+    color: $color-course-proserv;
+  }
+}

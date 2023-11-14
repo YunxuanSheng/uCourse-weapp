@@ -1,0 +1,25 @@
+@import '../../../../utils/scheme.scss';
+@import '../../../../utils/mixins.scss';
+
+.course-list {
+  .course {
+    // background-color: #004d76;
+    // @include ripple(#004d76);
+    color: #fff;
+    font-size: $f4;
+    margin: 10px 25px;
+    padding: 20px 25px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.2s ease-in-out !important;
+    &:active {
+      transition: background 0s, transform 0.2s ease-in-out !important;
+      transform: scale3d(0.96, 0.96, 1);
+    }
+    .title {
+      font-weight: bold;
+    }
+  }
+
+  @extend .color-course;
+}

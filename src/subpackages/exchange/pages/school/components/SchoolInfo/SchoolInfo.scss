@@ -1,0 +1,29 @@
+@import '../../../../../../utils/scheme.scss';
+
+.school-info {
+  background-color: #fff;
+  padding: 0 25px;
+  white-space: normal;
+  word-wrap: break-word;
+}
+.field {
+  margin: 25px 0;
+  .key {
+    font-weight: bold;
+    line-height: 1;
+    margin: 10px 0;
+    font-size: $f4;
+    border-left: 10px solid $color-primary;
+    padding-left: 15px;
+  }
+  .value {
+    font-size: $f6;
+  }
+  .link {
+    color: $color-link-normal;
+    font-weight: bold;
+    &:active {
+      color: $color-link-press;
+    }
+  }
+}

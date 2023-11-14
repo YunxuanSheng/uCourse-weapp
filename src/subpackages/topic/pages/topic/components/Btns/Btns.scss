@@ -1,0 +1,45 @@
+@import '../../../../../../utils/scheme.scss';
+@import '../../../../../../utils/mixins.scss';
+
+.comment-bar {
+  @include iPhoneXTabbarHeight;
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid $color-line;
+  padding: 15px 25px;
+  background-color: #fff;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .avatar {
+    box-sizing: border-box;
+    margin-right: 15px;
+    @include flex-center();
+  }
+  .input-area {
+    flex: 1;
+    border-radius: 100px;
+    background-color: $color-bg;
+    color: $color-text-placeholder;
+    font-size: $f6;
+    padding: 15px 25px;
+    @include flex-center-y();
+    &:active {
+      opacity: 0.6;
+    }
+  }
+  .func-icon {
+    box-sizing: border-box;
+    color: $color-text-secondary;
+    margin-left: 25px;
+    font-size: 64px;
+    &:active {
+      color: $color-primary;
+    }
+  }
+}

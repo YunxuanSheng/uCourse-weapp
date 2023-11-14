@@ -1,0 +1,36 @@
+@import '../../utils/mixins.scss';
+
+.popup {
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background: #000000cc;
+  .imageContainer {
+    display: block;
+    margin: auto;
+    margin-top: 8vh;
+    Image {
+      width: 100vw;
+      height: calc( 100vw * 560 / 400 );
+    }
+  }
+  .button {
+    width: max-content;
+    padding: .6rem 1.2rem;
+    color: #fff;
+    margin: auto;
+    margin-top: 2rem;
+    border: 1px solid #fff;
+    border-radius: 4px;
+  }
+  .btn-close {
+    margin: 6vh 5vw 4px;
+    text-align: center;
+    font-size: 28px;
+    padding: 4px;
+    width: 42px;
+    height: 42px;
+    border-radius: 42px;
+  }
+}

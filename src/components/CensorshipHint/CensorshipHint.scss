@@ -1,0 +1,12 @@
+@import './../../utils/scheme';
+.container {
+  background: $color-bg;
+  font-size: $f5;
+  color: $color-text-secondary;
+  padding: 25px;
+  border-left: 15px solid #ccc;
+}
+.reason-content {
+  color: $color-text-long;
+  font-weight: bold;
+}

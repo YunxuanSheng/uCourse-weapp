@@ -1,0 +1,156 @@
+@mixin one-px($top, $right, $bottom, $left, $color: #c7c7c7) {
+  position: relative;
+
+  $scale: 3;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% * $scale;
+    height: 100% * $scale;
+    border: 0 $color solid;
+    box-sizing: border-box;
+    transform-origin: 0 0;
+    transform: scale(1 / $scale);
+    pointer-events: none;
+    z-index: 0;
+
+    @if ($top > 0) {
+      border-top-width: 1px;
+    }
+
+    @if ($right > 0) {
+      border-right-width: 1px;
+    }
+
+    @if ($bottom > 0) {
+      border-bottom-width: 1px;
+    }
+
+    @if ($left > 0) {
+      border-left-width: 1px;
+    }
+  }
+}
+
+@mixin one-px-clear() {
+  &:before {
+    display: none;
+  }
+}
+
+@mixin ellipsis($w: auto) {
+  width: $w;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+@mixin ellipsis-ln($line: 2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+}
+
+@mixin text-wrap() {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+@mixin hyphens() {
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+@mixin flex-center-y() {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center-x() {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin ripple($color: #fff) {
+  background-position: center;
+  transition: background 0.5s;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  &:hover {
+    background: $color radial-gradient(circle, transparent 1%, $color 1%)
+      center/15000%;
+  }
+  &:active {
+    @if $color == #fff {
+      background-color: rgba(0, 0, 0, 0.1);
+    } @else {
+      background-color: lighten($color, 5%);
+    }
+    background-size: 100%;
+    transition: background 0s;
+  }
+}
+
+@mixin frost() {
+  backdrop-filter: saturate(180%) blur(40px);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+@mixin clearBtn() {
+  button {
+    /* cover default btn class */
+    border: none !important;
+    background-color: rgba(255, 255, 255, 0);
+    width: fit-content;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+    &:after {
+      content: none !important;
+      border: none !important;
+    }
+  }
+}
+
+@mixin skeletonLoading() {
+  @keyframes card-loading {
+    0%,
+    to {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  background: linear-gradient(
+    90deg,
+    rgba(207, 216, 220, 0.2),
+    rgba(207, 216, 220, 0.4),
+    rgba(207, 216, 220, 0.2)
+  );
+  animation: card-loading 1.4s ease infinite;
+  background-size: 600% 600%;
+  transform: translate3d(0, 0, 0);
+}
+
+@mixin iPhoneXTabbarHeight($orgin-padding-bottom: 0px) {
+  padding-bottom: $orgin-padding-bottom;
+  @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+    padding-bottom: $orgin-padding-bottom + 68px;
+  }
+}

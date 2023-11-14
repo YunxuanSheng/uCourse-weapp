@@ -1,0 +1,81 @@
+@import '../../utils/scheme.scss';
+@import '../../utils/mixins.scss';
+
+.share-action-sheet-comp {
+  .mask {
+    transition: all 0.3s ease-in-out;
+    position: fixed;
+    z-index: 9;
+    background: rgba(0, 0, 0, 0.9);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  .action-sheet {
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 10;
+    background: #fff;
+    bottom: 25px;
+    right: 25px;
+    left: 25px;
+    padding: 0;
+    margin: 0;
+    height: 20vh;
+    border-radius: 20px;
+    @include frost();
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .btns {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      .btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .wechat-icon {
+          color: $color-success-normal;
+          font-size: $f1;
+        }
+        .moment-icon {
+          color: $color-primary;
+          font-size: $f1;
+        }
+        .text {
+          font-size: $f5;
+        }
+      }
+    }
+  }
+}
+
+.show {
+  .mask {
+    background: rgba(0, 0, 0, 0.3);
+    transform: translate3d(0, 0, 0);
+  }
+  .action-sheet {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.hide {
+  pointer-events: none;
+  .mask {
+    background: rgba(0, 0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .action-sheet {
+    transform: translate3d(0, 25vh, 0);
+  }
+}

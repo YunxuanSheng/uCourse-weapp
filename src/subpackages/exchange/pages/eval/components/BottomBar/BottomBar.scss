@@ -1,0 +1,56 @@
+@import '../../../../../../utils/scheme.scss';
+@import '../../../../../../utils/mixins.scss';
+
+.bottom-bar {
+  @include iPhoneXTabbarHeight;
+  position: fixed !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 15px 25px;
+  display: flex;
+  font-size: $f6;
+  color: $color-text-secondary;
+  font-weight: 900;
+  display: flex;
+  justify-content: space-between;
+  .vote-btns {
+    display: flex;
+    align-items: center;
+    .vote-btn {
+      height: 60px;
+      background-color: $color-bg;
+      border-radius: 10px;
+      padding: 15px 25px;
+      box-sizing: border-box;
+      @include flex-center;
+      margin-right: 10px;
+      justify-content: space-between;
+      align-items: center;
+      .pro-detail {
+        margin-left: 10px;
+      }
+    }
+    .active {
+      background-color: $color-primary;
+      color: #fff;
+    }
+  }
+  .func-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    .func-btn {
+      vertical-align: middle;
+      padding: 0 10px;
+      @include clearBtn();
+      .active {
+        color: $color-primary;
+      }
+    }
+  }
+}

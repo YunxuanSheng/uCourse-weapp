@@ -1,0 +1,33 @@
+@import '../../../../utils/scheme.scss';
+@import '../../../../utils/mixins.scss';
+
+.propbar {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  .item {
+    background-color: #fff;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @include ripple();
+    &:before {
+      position: absolute;
+      content: '';
+      right: 0;
+      top: 20%;
+      bottom: 20%;
+      width: 1px;
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+    .count {
+      font-size: $f3;
+    }
+    .name {
+      font-size: $f6;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import '../../../../utils/scheme.scss';
+
+.unavailable-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: $f5;
+  line-height: 1.75;
+  .logo {
+    width: 50vw;
+  }
+  .text-container {
+    margin: 50px;
+    font-size: $f2;
+  }
+  .time {
+    display: flex;
+    margin: 50px;
+    align-items: center;
+    justify-content: space-around;
+    &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $color-primary;
+      width: $f2 * 1.5;
+      height: $f2 * 1.5;
+      font-size: $f2;
+      line-height: 1;
+      font-weight: bold;
+      color: #fff;
+      box-sizing: border-box;
+      border-radius: 10px;
+    }
+    &-unit {
+      margin: 0 10px;
+    }
+  }
+  .footer {
+    position: fixed;
+    bottom: 0;
+    @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+      bottom: 68px;
+    }
+    color: $color-text-placeholder;
+    font-size: $f7;
+    font-weight: 400;
+  }
+}

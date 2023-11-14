@@ -1,0 +1,72 @@
+@import '../../../../utils/scheme.scss';
+@import '../../../../utils/mixins.scss';
+
+.content {
+  width: 80vw;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.08),
+    0 10px 25px 2px rgba(0, 0, 0, 0.04);
+  &-head {
+    display: flex;
+    justify-content: center;
+    &-tag {
+      height: max-content;
+      min-width: max-content;
+      margin-right: .6rem;
+      padding: .1rem .4rem;
+      color: #fff;
+      font-size: $f5;
+      border-radius: 8px;
+    }
+    &-tags {
+      width: 75%;
+      display: flex;
+      flex-direction: row;
+      overflow-x: scroll;
+    }
+    &-time {
+      width: 25%;
+      text-align: right;
+      color: $color-text-secondary;
+      font-size: $f5;
+    }
+  }
+  &-body {
+    margin: .4rem 0;
+    &-title {
+      color: $color-text-primary;
+      font-size: $f2;
+    }
+    &-inner {
+      color: $color-text-secondary;
+      font-size: $f4;
+    }
+  }
+  &-foot {
+    display: flex;
+    font-size: $f5;
+    color: $color-text-secondary;
+    &-left {
+      width: 50%;
+      display: inline-block;
+    }
+    &-right {
+      width: 50%;
+      display: inline-block;
+      text-align: right;
+    }
+  }
+  &-provider {
+    margin-top: 1rem;
+    text-align: center;
+    img {
+      height: 1rem;
+    }
+    &-name {
+      font-size: $f5;
+    }
+  }
+}

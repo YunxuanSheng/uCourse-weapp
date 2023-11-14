@@ -1,0 +1,79 @@
+@import '../../../../utils/_scheme.scss';
+@import '../../../../utils/_mixins.scss';
+.course-detail-page {
+  padding: 25px 25px 125px 25px;
+  line-height: 1.75;
+  // text-align: justify;
+  color: $color-text-long;
+  background-color: $color-bg;
+  min-height: 100vh;
+  font-size: $f5;
+  word-wrap: break-word;
+  .info-container {
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.08),
+      0 10px 25px 2px rgba(0, 0, 0, 0.04);
+    padding: 25px;
+    .course-title {
+      font-weight: bold;
+      font-size: $f2;
+      line-height: 1.5;
+    }
+    .hint {
+      font-size: $f7;
+      color: $color-text-placeholder;
+      .link {
+        color: $color-link-normal;
+        margin: 0 5px;
+      }
+    }
+    .field {
+      margin: 25px 0;
+      .key {
+        font-weight: bold;
+        line-height: 1;
+        margin: 10px 0;
+        font-size: $f4;
+        border-left: 10px solid $color-primary;
+        padding-left: 15px;
+      }
+      .value {
+        font-size: $f6;
+        .table {
+          margin: 25px 0;
+          display: flex;
+          flex-direction: column;
+          .row {
+            display: flex;
+            flex-direction: row;
+            .cell {
+              flex: 1;
+              @include flex-center();
+              @include one-px(1, 1, 1, 1);
+            }
+          }
+          .title {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .translate-btn {
+      position: fixed;
+      bottom: 50px;
+      right: 50px;
+      button {
+        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+          0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+        &:active {
+          box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+            0 3px 14px 2px rgba(0, 0, 0, 0.12),
+            0 5px 5px -3px rgba(0, 0, 0, 0.4);
+          transition: all 0.2s ease;
+        }
+      }
+    }
+  }
+}

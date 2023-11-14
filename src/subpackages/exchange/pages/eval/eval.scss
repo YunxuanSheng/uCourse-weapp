@@ -1,0 +1,15 @@
+@import '../../../../utils/scheme.scss';
+@import '../../../../utils/mixins.scss';
+
+.eval-page {
+  min-height: 100vh;
+  background-color: $color-bg;
+  @include iPhoneXTabbarHeight(100px);
+  .nav {
+    .see-all {
+      font-size: 18px;
+      color: $color-text-secondary;
+      line-height: 1;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import '../../../../../utils/_scheme.scss';
+
+.comments {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: $f6;
+  .comment {
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+    &:active {
+      background-color: rgba(0, 0, 0, 0.03);
+    }
+    .left {
+      margin-right: 15px;
+    }
+    .right {
+      flex: 1;
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5px;
+        .left {
+          .nickname {
+            font-weight: bold;
+          }
+          .time {
+            font-size: $f7;
+            color: $color-text-placeholder;
+          }
+        }
+        .like {
+          color: $color-text-secondary;
+        }
+      }
+      .content {
+        line-height: 1.5;
+        color: $color-text-long;
+      }
+    }
+  }
+  .children {
+    .count {
+      background-color: $color-bg;
+      color: $color-text-placeholder;
+      font-size: $f6;
+      padding: 15px 25px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import '../../utils/scheme.scss';
+
+.topic-course-vote {
+  font-size: $f4;
+  color: $color-text-placeholder;
+  display: flex;
+  align-items: center;
+  .icon {
+    color: #ff9800;
+    margin-right: 10px;
+  }
+  .icon-o {
+    margin-right: 10px;
+  }
+}

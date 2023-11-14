@@ -1,0 +1,20 @@
+@import '../../../../../../utils/scheme.scss';
+
+.header-img {
+  width: 750px;
+  height: 319px;
+}
+
+.info {
+  padding: 25px;
+  line-height: 1.5;
+  .title {
+    font-size: $f3;
+    margin-bottom: 25px;
+    color: $color-text-primary;
+  }
+  .description {
+    font-size: $f5;
+    color: $color-text-long;
+  }
+}

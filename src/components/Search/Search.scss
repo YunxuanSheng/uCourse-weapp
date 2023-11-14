@@ -1,0 +1,39 @@
+@import '../../utils/scheme.scss';
+@import '../../utils/mixins.scss';
+
+.search-comp {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #fff;
+  width: 100%;
+  font-size: $f5;
+  line-height: 1;
+  padding: 15px 25px;
+  .input-container {
+    flex: 1;
+    box-sizing: border-box;
+    background-color: $color-bg;
+    border-radius: 10px 0 0 10px;
+    padding: 15px;
+    height: 80px;
+    @include flex-center-y();
+    .input {
+      height: $f5;
+    }
+  }
+  .selector {
+    box-sizing: border-box;
+    border: 1px solid $color-bg;
+    border-right: 0;
+    color: $color-text-placeholder;
+    font-weight: bold;
+    width: 100px;
+    height: 80px;
+    @include flex-center();
+  }
+  .selector-last {
+    border: 1px solid $color-bg;
+    border-radius: 0 10px 10px 0;
+  }
+}

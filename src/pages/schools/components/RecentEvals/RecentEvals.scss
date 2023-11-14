@@ -1,0 +1,82 @@
+@import '../../../../utils/scheme.scss';
+@import '../../../../utils/mixins.scss';
+
+.field-content {
+  width: 750px;
+  transform: translateX(-25px);
+}
+
+.scroll-view {
+  width: 100%;
+  white-space: nowrap;
+  @extend .color-course;
+}
+
+.eval-card {
+  background-color: #fff;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.08),
+    0 10px 25px 2px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  white-space: normal;
+  width: 500px;
+  height: 200px;
+  padding: 25px;
+  margin: 5px 15px;
+  margin-left: 25px;
+  &:last-child {
+    margin-right: 25px;
+  }
+  &:active {
+    transition: transform 0.1s ease-in-out;
+    transform: scale3d(0.96, 0.96, 1);
+  }
+  position: relative;
+  overflow: hidden;
+  z-index: 1; // fix a bug in Android:https://stackoverflow.com/questions/5736503/how-to-make-css3-rounded-corners-hide-overflow-in-chrome-opera
+  .school {
+    position: absolute;
+    top: -$f7 * 2.5;
+    right: -$f7 * 2.5;
+    color: #fff;
+    font-size: $f7;
+    line-height: 1;
+    height: $f7 * 5;
+    width: $f7 * 5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transform: rotate(45deg);
+  }
+  .course-title {
+    font-size: $f5;
+    font-weight: bold;
+    @include ellipsis();
+  }
+  .eval-content {
+    line-height: 1.5;
+    font-size: $f6;
+    color: $color-text-secondary;
+    height: 1.5 * $f6 * 2;
+    @include ellipsis-ln();
+  }
+  .user {
+    display: flex;
+    align-items: center;
+    font-size: $f7;
+    color: $color-text-placeholder;
+    .avatar {
+      margin-right: 15px;
+    }
+    .nickname {
+      color: $color-link-normal;
+    }
+    .dot {
+      margin: 0 5px;
+    }
+  }
+}

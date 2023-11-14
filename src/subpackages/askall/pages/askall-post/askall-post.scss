@@ -1,0 +1,76 @@
+@import '../../../../utils/_scheme.scss';
+@import '../../../../utils/_mixins.scss';
+
+.askall-post-page {
+  min-height: 100vh;
+  background-color: $color-bg;
+  @include iPhoneXTabbarHeight(100px);
+  .card-container {
+    background-color: #fff;
+    box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.02),
+      0 10px 25px 2px rgba(0, 0, 0, 0.01);
+    padding: 25px;
+    margin: 25px 0;
+    font-size: $f5;
+    .card-title {
+      font-size: $f3;
+      font-weight: bold;
+      display: flex;
+      &-hint {
+        font-size: $f7;
+        font-weight: normal;
+        margin-left: 15px;
+        color: $color-text-placeholder;
+      }
+    }
+    .card-body {
+      margin: 25px 0;
+    }
+    .card-hint {
+      color: $color-text-placeholder;
+      margin: 15px 0;
+    }
+    .card-footer {
+      color: $color-text-placeholder;
+      font-size: $f7;
+    }
+    .show-more {
+      color: $color-link-normal;
+      &:active {
+        opacity: 0.6;
+      }
+    }
+    .content-container {
+      box-sizing: border-box;
+      padding: 25px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      font-size: $f5;
+      position: relative;
+      .textarea {
+        width: 100%;
+        min-height: 60vh;
+        // line-height: 1.75;
+        color: $color-text-long;
+        word-wrap: break-word;
+      }
+      .word-count {
+        position: absolute;
+        bottom: 25px;
+        right: 25px;
+        color: $color-text-placeholder;
+      }
+    }
+  }
+  .submit {
+    display: inline-block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    font-size: $f4;
+    padding: 10px 30px;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 40px;
+    background-color: $color-primary;
+  }
+}

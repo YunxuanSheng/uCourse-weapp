@@ -1,0 +1,137 @@
+@import '../../../../utils/_scheme.scss';
+@import '../../../../utils/_mixins.scss';
+
+.eval-new-page {
+  min-height: 100vh;
+  background-color: $color-bg;
+  padding: 0 25px;
+  @include iPhoneXTabbarHeight(25px);
+  .card-container {
+    background-color: #fff;
+    box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.02),
+      0 10px 25px 2px rgba(0, 0, 0, 0.01);
+    padding: 25px;
+    margin: 25px 0;
+    font-size: $f5;
+    .card-title {
+      font-size: $f3;
+      font-weight: bold;
+      display: flex;
+      &-hint {
+        font-size: $f7;
+        font-weight: normal;
+        margin-left: 15px;
+        color: $color-text-placeholder;
+      }
+    }
+    .card-body {
+      margin: 25px 0;
+    }
+    .card-hint {
+      color: $color-text-placeholder;
+      margin: 15px 0;
+    }
+    .card-footer {
+      color: $color-text-placeholder;
+      font-size: $f7;
+    }
+    .show-more {
+      color: $color-link-normal;
+      &:active {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+.rate-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.content-container {
+  box-sizing: border-box;
+  padding: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: $f5;
+  position: relative;
+  .textarea {
+    width: 100%;
+    min-height: 45vh;
+    // line-height: 1.75;
+    color: $color-text-long;
+    word-wrap: break-word;
+  }
+  .word-count {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    color: $color-text-placeholder;
+  }
+}
+
+.year-tag-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .year-tag {
+    background-color: #f7f7f7;
+    font-size: $f5;
+    border-radius: 100px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin: 15px 0;
+    width: $f5 * 6;
+  }
+  .year-tag-active {
+    background-color: $color-primary;
+    color: #fff;
+  }
+}
+
+.btns-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .btn {
+    margin: 25px 0;
+  }
+  .save-btn {
+    flex: 1;
+    margin-right: 30px;
+  }
+  .post-btn {
+    flex: 2;
+  }
+}
+
+.pic-uploader {
+  margin: 15px 0;
+  height: 200px;
+  border: 5px dashed $color-bg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $color-text-secondary;
+  .icon {
+    font-size: 60px;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.switch-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .label {
+    font-size: $f5;
+  }
+}

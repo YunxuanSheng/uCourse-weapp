@@ -1,0 +1,63 @@
+@import '../../utils/scheme.scss';
+
+.careers-page {
+  height: 100vh;
+
+  .search-nav-comp {
+    background-color: $color-bg;
+    border-radius: 100px;
+    font-size: $f5;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 200px;
+    color: $color-text-secondary;
+    &:active {
+      opacity: 0.8;
+    }
+    .icon {
+      margin-right: 10px;
+    }
+  }
+
+  .tabs {
+    margin: 1rem 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    color: $color-text-primary;
+    font-size: $f3;
+    .tab {
+      font-weight: 400;
+      margin-left: 3rem;
+      padding: .1rem;
+    }
+    .tab:first-of-type {
+      margin-left: 0;
+    }
+    .active {
+      font-weight: 600;
+      background: linear-gradient(#fff 70%, #ffb11b 30%);
+    }
+  }
+
+  .order {
+    text-align: center;
+    color: $color-text-secondary;
+    font-size: $f5;
+  }
+  .content-list {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+
+    .hint {
+      margin-top: 10rem;
+      color: $color-text-secondary;
+      font-size: $f5;
+    }
+  }
+}

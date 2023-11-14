@@ -1,0 +1,243 @@
+@import '../../../../utils/scheme.scss';
+@import '../../../../utils/mixins.scss';
+
+.content-wrap {
+  .field {
+    box-sizing: border-box;
+    margin: 15px 0;
+    padding: 25px 0;
+    background-color: #fff;
+    font-size: $f5;
+    &-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 25px;
+      line-height: 1;
+      font-weight: bold;
+      .see-more {
+        font-size: $f6;
+        font-weight: 400;
+        color: $color-text-placeholder;
+      }
+    }
+    &-content {
+      margin-top: 25px;
+    }
+  }
+}
+
+.scroll-view {
+  width: 100%;
+  white-space: nowrap;
+  @extend .color-course;
+}
+
+.set-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 50px;
+}
+
+.my-course-card-container {
+  display: inline-flex;
+  padding-left: 25px;
+  &:last-child {
+    padding-right: 25px;
+  }
+  .my-course-card {
+    display: inline-flex;
+    box-sizing: border-box;
+    padding: 25px;
+    width: 250px;
+    height: 2 * 1.5 * $f5 + 25 * 2;
+    border-radius: 10px;
+    color: #fff;
+    white-space: normal;
+    &:active {
+      transition: transform 0.1s ease-in-out;
+      transform: scale3d(0.96, 0.96, 1);
+    }
+    .course-title {
+      font-weight: bold;
+      font-size: $f5;
+      line-height: 1.5;
+      height: 1.5 * $f5 * 2;
+      @include ellipsis-ln();
+    }
+  }
+}
+
+.courseqa-card {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.08),
+    0 10px 25px 2px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  white-space: normal;
+  width: 400px;
+  height: 200px;
+  padding: 25px;
+  margin: 15px;
+  margin-left: 25px;
+  &:last-child {
+    margin-right: 25px;
+  }
+  &:active {
+    transition: transform 0.1s ease-in-out;
+    transform: scale3d(0.96, 0.96, 1);
+  }
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  .course-title {
+    font-weight: bold;
+    @include ellipsis();
+  }
+  .eval-content {
+    margin-top: 12px;
+    line-height: 1.5;
+    font-size: $f6;
+    color: $color-text-primary;
+    height: $f6 * 4;
+    @include ellipsis-ln();
+  }
+  .user {
+    display: flex;
+    align-items: center;
+    font-size: $f7;
+    color: $color-text-placeholder;
+    .dot {
+      margin: 0 5px;
+    }
+  }
+}
+
+.eval-card {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.08),
+    0 10px 25px 2px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  white-space: normal;
+  width: 500px;
+  height: 200px;
+  padding: 25px;
+  margin: 15px;
+  margin-left: 25px;
+  &:last-child {
+    margin-right: 25px;
+  }
+  &:active {
+    transition: transform 0.1s ease-in-out;
+    transform: scale3d(0.96, 0.96, 1);
+  }
+  position: relative;
+  overflow: hidden;
+  z-index: 1; // fix a bug in Android:https://stackoverflow.com/questions/5736503/how-to-make-css3-rounded-corners-hide-overflow-in-chrome-opera
+  .school {
+    position: absolute;
+    top: -$f7 * 2.5;
+    right: -$f7 * 2.5;
+    color: #fff;
+    font-size: $f7;
+    line-height: 1;
+    height: $f7 * 5;
+    width: $f7 * 5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transform: rotate(45deg);
+  }
+  .course-title {
+    font-weight: bold;
+    @include ellipsis();
+  }
+  .eval-content {
+    line-height: 1.5;
+    font-size: $f6;
+    color: $color-text-secondary;
+    height: 1.5 * $f6 * 2;
+    @include ellipsis-ln();
+  }
+  .user {
+    display: flex;
+    align-items: center;
+    font-size: $f7;
+    color: $color-text-placeholder;
+    .avatar {
+      margin-right: 15px;
+    }
+    .nickname {
+      color: $color-link-normal;
+    }
+    .dot {
+      margin: 0 5px;
+    }
+  }
+}
+
+.course-card {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.08),
+    0 10px 25px 2px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  white-space: normal;
+  width: 500px;
+  height: 150px;
+  padding: 25px;
+  margin: 15px;
+  margin-left: 25px;
+  &:last-child {
+    margin-right: 25px;
+  }
+  &:active {
+    transition: transform 0.1s ease-in-out;
+    transform: scale3d(0.96, 0.96, 1);
+  }
+  position: relative;
+  overflow: hidden;
+  z-index: 1; // fix a bug in Android:https://stackoverflow.com/questions/5736503/how-to-make-css3-rounded-corners-hide-overflow-in-chrome-opera
+  .school {
+    position: absolute;
+    top: -$f7 * 2.5;
+    right: -$f7 * 2.5;
+    color: #fff;
+    font-size: $f7;
+    line-height: 1;
+    height: $f7 * 5;
+    width: $f7 * 5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transform: rotate(45deg);
+  }
+  .course-title {
+    font-weight: bold;
+    line-height: 1;
+    font-size: $f6;
+    height: $f6 * 2;
+    @include ellipsis-ln();
+  }
+  .count {
+    font-size: $f7;
+    color: $color-text-placeholder;
+  }
+  .rate {
+    font-weight: bold;
+    font-size: $f1;
+  }
+}

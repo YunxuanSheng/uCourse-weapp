@@ -1,0 +1,46 @@
+@import '../../utils/scheme.scss';
+@import '../../utils/mixins.scss';
+
+.drafts-page {
+  min-height: 100vh;
+  background-color: $color-bg;
+}
+
+.draft {
+  height: 200px;
+  background: #ffffff;
+  width: 750px;
+  box-sizing: border-box;
+  padding: 25px;
+  margin-bottom: 15px;
+  &:active {
+    opacity: 0.6;
+  }
+
+  &-header {
+    font-size: $f3;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .delete {
+      font-weight: normal;
+      font-size: $f7;
+      color: $color-error-normal;
+      display: flex;
+      align-items: center;
+      &:active {
+        color: $color-error-press;
+      }
+      .icon {
+        font-size: $f6;
+        margin-right: 5px;
+      }
+    }
+  }
+  &-content {
+    margin-top: 30px;
+    font-size: $f5;
+    color: $color-text-secondary;
+  }
+}

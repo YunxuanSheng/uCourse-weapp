@@ -1,0 +1,38 @@
+@import '../../../../../../utils/scheme.scss';
+@import '../../../../../../utils/mixins.scss';
+
+.hint-comp {
+  position: fixed;
+  z-index: 16;
+  bottom: 130px;
+  @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+    bottom: 130px + 68px;
+  }
+  right: 20px;
+  transform: translate3d(-50%, 0, 0);
+  font-size: $f7;
+  color: #fff;
+  background-color: $color-primary;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  &:after {
+    content: ' ';
+    position: absolute;
+    left: 50%;
+    right: 0;
+    bottom: -16px;
+    transform: translate3d(-50%, 0, 0);
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color: $color-primary transparent transparent transparent;
+  }
+}
+
+.show {
+  opacity: 1;
+}

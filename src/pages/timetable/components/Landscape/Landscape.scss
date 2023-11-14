@@ -1,0 +1,77 @@
+@import '../../../../utils/scheme.scss';
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.landscape-page {
+  width: 750px;
+  height: 100vh;
+  animation: gradient 10s ease infinite;
+  background: linear-gradient(
+    -45deg,
+    rgba(238, 119, 82, 0.5),
+    rgba(231, 60, 126, 0.5),
+    rgba(35, 166, 213, 0.5),
+    rgba(35, 213, 171, 0.5),
+    rgba(255, 152, 0, 0.5)
+  );
+  background-size: 400% 400%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 750px;
+  box-sizing: border-box;
+  padding: 25px 50px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.indicator {
+  font-size: $f8;
+  color: $color-text-secondary;
+}
+.title {
+  font-size: $f2;
+  font-weight: bold;
+  color: $color-text-primary;
+}
+.info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: $f7;
+  color: $color-text-primary;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 750px;
+  padding: 15px 25px;
+  background-color: #fff;
+  .title {
+    font-size: $f4;
+    font-weight: bold;
+    color: $color-text-primary;
+  }
+  &:active {
+    opacity: 0.5;
+  }
+}

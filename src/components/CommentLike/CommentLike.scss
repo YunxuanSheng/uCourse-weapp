@@ -1,0 +1,12 @@
+@import '../../utils/scheme.scss';
+
+.comment-like {
+  font-size: $f5;
+  color: $color-text-placeholder;
+  display: flex;
+  align-items: center;
+  .icon {
+    color: #f40;
+    margin-right: 10px;
+  }
+}

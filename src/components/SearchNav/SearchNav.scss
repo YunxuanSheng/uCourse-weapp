@@ -1,0 +1,19 @@
+@import '../../utils/scheme.scss';
+
+.search-nav-comp {
+  background-color: $color-bg;
+  border-radius: 100px;
+  font-size: $f5;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 200px;
+  color: $color-text-secondary;
+  &:active {
+    opacity: 0.8;
+  }
+  .icon {
+    margin-right: 10px;
+  }
+}

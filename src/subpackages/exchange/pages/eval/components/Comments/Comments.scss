@@ -1,0 +1,113 @@
+@import '../../../../../../utils/scheme.scss';
+@import '../../../../../../utils/mixins.scss';
+
+.comments-container {
+  box-sizing: border-box;
+  background-color: #fff;
+  // min-height: 100vh;
+  padding: 25px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  .comment-title {
+    font-size: $f4;
+    font-weight: bold;
+    padding: 25px 0;
+  }
+  .placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0;
+    color: $color-text-placeholder;
+    .comment-icon {
+      height: 100px;
+      width: 100px;
+      opacity: 0.5;
+    }
+    .hint {
+      margin-top: 10px;
+      font-size: $f5;
+    }
+  }
+  .comment {
+    font-size: $f6;
+    display: flex;
+    margin-bottom: 25px;
+    &:active {
+      position: relative;
+      &:before {
+        content: ' ';
+        top: 0;
+        bottom: 0;
+        left: -25px;
+        right: -25px;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.03);
+      }
+    }
+    .left {
+      margin-right: 15px;
+    }
+    .right {
+      flex: 1;
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        .nickname {
+          font-weight: bold;
+        }
+        .like {
+          color: $color-text-secondary;
+        }
+      }
+      .content {
+        line-height: 1.5;
+        color: $color-text-long;
+      }
+    }
+  }
+  .see-all-link {
+    margin-left: 60+15px;
+    color: $color-link-normal;
+    // color: $color-primary;
+    font-size: $f6;
+    font-weight: bold;
+    &:active {
+      color: $color-link-press;
+    }
+  }
+  .comment-bar {
+    margin-top: 25px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &:active {
+      .input-area {
+        opacity: 0.6;
+      }
+    }
+    .avatar {
+      box-sizing: border-box;
+      margin-right: 15px;
+      @include flex-center();
+    }
+    .input-area {
+      flex: 1;
+      border-radius: 100px;
+      background-color: $color-bg;
+      color: $color-text-placeholder;
+      font-size: $f6;
+      padding: 15px 25px;
+      @include flex-center-y();
+    }
+    .send-icon {
+      box-sizing: border-box;
+      color: $color-bg;
+      margin-left: 10px;
+      font-size: 64px;
+    }
+  }
+}

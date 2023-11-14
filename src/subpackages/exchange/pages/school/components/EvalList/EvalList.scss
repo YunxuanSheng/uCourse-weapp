@@ -1,0 +1,58 @@
+@import '../../../../../../utils/scheme.scss';
+@import '../../../../../../utils/mixins.scss';
+
+.eval-list-container {
+  font-size: $f6;
+  text-align: justify;
+  line-height: 1.5;
+  .header {
+    padding: 10px 25px;
+    color: $color-text-placeholder;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .order-by {
+      margin-right: 10px;
+    }
+  }
+  .eval-container {
+    background-color: #fff;
+    margin: 15px 0;
+    padding: 25px;
+    &:active {
+      opacity: 0.7;
+    }
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &-left {
+        display: flex;
+        align-items: center;
+        .nickname {
+          margin-left: 15px;
+          font-size: $f7;
+          color: $color-text-secondary;
+        }
+      }
+      &-right {
+        display: flex;
+        align-items: center;
+        .rate {
+          font-weight: bold;
+          color: $color-primary;
+          margin-right: 15px;
+        }
+      }
+    }
+
+    .content {
+      color: $color-text-long;
+      margin: 15px 0;
+      @include ellipsis-ln(3);
+    }
+    .info {
+      color: $color-text-secondary;
+    }
+  }
+}

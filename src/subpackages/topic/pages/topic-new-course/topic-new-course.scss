@@ -1,0 +1,41 @@
+@import '../../../../utils/scheme.scss';
+@import '../../../../utils/mixins.scss';
+
+.my-evals-page {
+  min-height: 100vh;
+  background-color: $color-bg;
+  @include iPhoneXTabbarHeight(25px);
+}
+
+.my-evals {
+  min-height: 200px;
+  background: #ffffff;
+  width: 750px;
+  box-sizing: border-box;
+  padding: 25px;
+  margin-bottom: 15px;
+  &:active {
+    opacity: 0.6;
+  }
+
+  .title {
+    font-size: $f3;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .content {
+    margin-top: 30px;
+    font-size: $f5;
+    color: $color-text-secondary;
+    @include ellipsis-ln(3);
+  }
+}
+
+.create-btn {
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

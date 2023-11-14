@@ -1,0 +1,55 @@
+@import '../../../../utils/scheme.scss';
+@import '../../../../utils/mixins.scss';
+
+.edit-page {
+  background-color: $color-bg;
+  min-height: 100vh;
+  .list {
+    margin-top: 25px;
+    .gap {
+      height: 25px;
+    }
+    .list-item {
+      box-sizing: border-box;
+      background-color: #fff;
+      padding: 25px 25px;
+      font-size: $f5;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include one-px(0, 0, 1, 0, rgba(0, 0, 0, 0.1));
+      &:active {
+        opacity: 0.65;
+      }
+      .left {
+        position: relative;
+        .red-dot {
+          position: absolute;
+          top: -5px;
+          right: -15px;
+          background-color: $color-error-normal;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+        }
+      }
+      .right {
+        display: flex;
+        align-items: center;
+        color: $color-text-secondary;
+        text-align: right;
+        max-width: 550px;
+        .enter {
+          margin-left: 10px;
+        }
+      }
+    }
+    .hint {
+      color: $color-text-placeholder;
+      font-size: $f6;
+      padding: 0 25px;
+      box-sizing: border-box;
+      margin-top: 10px;
+    }
+  }
+}

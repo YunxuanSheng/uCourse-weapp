@@ -1,0 +1,36 @@
+@import '../../../../utils/scheme.scss';
+
+.activities-page {
+  min-height: 100vh;
+  background-color: $color-bg;
+}
+
+.card {
+  width: 750px;
+  box-sizing: border-box;
+  padding: 25px;
+  background-color: #fff;
+  margin: 10px 0;
+  font-size: $f6;
+  &:active {
+    opacity: 0.8;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-text-secondary;
+  }
+  .title {
+    margin: 10px 0;
+    font-size: $f4;
+    font-weight: bold;
+    color: $color-text-long;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-text-secondary;
+  }
+}

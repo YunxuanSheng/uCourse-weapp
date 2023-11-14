@@ -1,0 +1,25 @@
+@import '../../../../utils/scheme.scss';
+
+.edit-id-page {
+  background-color: $color-bg;
+  min-height: 100vh;
+  font-size: $f5;
+  .gap {
+    height: 25px;
+  }
+  .list-item {
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    .icon {
+      height: 40px;
+      width: 40px;
+      margin-right: 10px;
+    }
+    .input {
+      width: 100%;
+    }
+  }
+}

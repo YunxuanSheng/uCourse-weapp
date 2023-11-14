@@ -1,0 +1,51 @@
+@import '../../../../utils/_scheme.scss';
+
+.profile-page {
+  background-color: #eee;
+  min-height: 100vh;
+  .header {
+    width: 100%;
+    height: 200px;
+    background: $color-primary;
+  }
+  .user-info {
+    padding: 0 25px;
+    background-color: #fff;
+
+    .avatar {
+      transform: translateY(-50%);
+    }
+
+    .info {
+      margin-top: -64+15px;
+      .base {
+        display: flex;
+        align-items: center;
+        .nickname {
+          font-size: $f2;
+          font-weight: bold;
+        }
+        .gender {
+          margin: 0 15px;
+        }
+      }
+
+      .infoitem {
+        font-size: $f5;
+        margin-top: 15px;
+        color: $color-text-secondary;
+        & View,
+        Text {
+          margin-right: 5px;
+        }
+      }
+
+      .prop {
+        font-size: $f5;
+        margin-top: 25px;
+        padding-bottom: 25px;
+        font-weight: bold;
+      }
+    }
+  }
+}

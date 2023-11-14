@@ -1,0 +1,41 @@
+@import '../../utils/scheme.scss';
+@import '../../utils/mixins.scss';
+
+.tabs-container {
+  width: 750px;
+  display: flex;
+  @include frost();
+  .tab {
+    flex: 1;
+    font-size: $f5;
+    color: $color-text-secondary;
+    padding: 15px 0;
+    box-sizing: content-box;
+    transition: all 0.3s ease-in-out;
+    @include flex-center();
+    // @include ripple());
+    position: relative;
+    &:after {
+      transition: all 0.3s ease-in-out;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 0;
+      height: 100%;
+      border-bottom: 2px solid $color-primary;
+    }
+  }
+  .active {
+    color: $color-primary;
+    position: relative;
+    &:after {
+      width: 100%;
+      left: 0;
+      transition-delay: 0.1s;
+    }
+    & ~ .tab:after {
+      left: 0;
+    }
+  }
+}

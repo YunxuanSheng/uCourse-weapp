@@ -1,0 +1,92 @@
+@import '../../../../utils/scheme.scss';
+@import '../../../../utils/mixins.scss';
+
+.content-wrap {
+  .field {
+    box-sizing: border-box;
+    margin: 15px 0;
+    padding: 25px 0;
+    background-color: #fff;
+    font-size: $f5;
+    &-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 25px;
+      line-height: 1;
+      font-weight: bold;
+      .see-more {
+        font-size: $f6;
+        font-weight: 400;
+        color: $color-text-placeholder;
+      }
+    }
+    &-content {
+      margin-top: 25px;
+    }
+  }
+}
+
+.scroll-view {
+  width: 100%;
+  white-space: nowrap;
+  @extend .color-course;
+}
+
+.my-course-card-placeholder {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 25px;
+  width: 250px;
+  height: 2 * 1.5 * $f5 + 25 * 2;
+  border-radius: 10px;
+  color: #fff;
+  white-space: normal;
+  margin-left: 25px;
+  &:last-child {
+    margin-right: 25px;
+  }
+  @include skeletonLoading();
+}
+
+.eval-card-placeholder {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.08),
+    0 10px 25px 2px rgba(0, 0, 0, 0.04);
+  // border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  white-space: normal;
+  width: 500px;
+  height: 200px;
+  margin: 15px;
+  margin-left: 25px;
+  &:last-child {
+    margin-right: 25px;
+  }
+  @include skeletonLoading();
+}
+
+.course-card-placeholder {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.08),
+    0 10px 25px 2px rgba(0, 0, 0, 0.04);
+  // border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  white-space: normal;
+  width: 500px;
+  height: 150px;
+  padding: 25px;
+  margin: 15px;
+  margin-left: 25px;
+  &:last-child {
+    margin-right: 25px;
+  }
+  @include skeletonLoading();
+}

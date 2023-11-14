@@ -1,0 +1,116 @@
+@import '../../../../../../utils/_scheme.scss';
+
+.eval-container {
+  box-sizing: border-box;
+  background-color: #fff;
+  // min-height: 100vh;
+  padding: 25px;
+  .header {
+    display: flex;
+    font-size: $f6;
+    justify-content: space-between;
+    &-left {
+      display: flex;
+      .user-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 10px;
+        .basic {
+          display: flex;
+          flex-direction: row;
+          .nickname {
+            font-weight: bold;
+            margin-right: 10px;
+          }
+          .badge {
+            margin-left: 10px;
+          }
+        }
+        .intro {
+          color: $color-text-secondary;
+          font-size: $f7;
+        }
+      }
+    }
+    &-right {
+      color: $color-text-placeholder;
+      font-size: $f2;
+    }
+  }
+  .eval-rate {
+    margin: 25px 0;
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.08),
+      0 10px 25px 2px rgba(0, 0, 0, 0.04);
+    font-size: $f5;
+    line-height: 1.5;
+    color: $color-text-secondary;
+    .left {
+      flex: 1;
+      .rate-container {
+        display: flex;
+        align-items: center;
+        height: $f5 * 2;
+        .rate-name {
+          min-width: 120px;
+          margin-right: 15px;
+        }
+      }
+    }
+    .right {
+      width: 300px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      font-size: $f1;
+      color: $color-text-long;
+      font-weight: bold;
+      position: relative;
+      .view-count {
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: $f6;
+        font-weight: normal;
+        color: $color-text-placeholder;
+        .view-icon {
+          margin-right: 10px;
+        }
+      }
+      .score-comp {
+        .comp {
+          font-size: $f5;
+          font-weight: 400;
+          color: $color-text-secondary;
+        }
+      }
+    }
+  }
+  .showTrans {
+    margin-top: 50px;
+    font-size: $f6;
+    color: $color-text-placeholder;
+    &:active {
+      opacity: 0.6;
+    }
+  }
+  .content {
+    padding: 20px 0;
+    text-rendering: optimizelegibility;
+    line-height: 1.75;
+    // text-align: justify;
+    color: $color-text-long;
+    font-size: $f5;
+    word-wrap: break-word;
+  }
+  .footer {
+    font-size: $f6;
+    color: $color-text-secondary;
+    padding-bottom: 80px;
+  }
+}

@@ -1,0 +1,48 @@
+@import '../../../../../../utils/_scheme.scss';
+@import '../../../../../../utils/_mixins.scss';
+.props {
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 25px;
+  margin: 0 25px;
+  position: relative;
+  transform: translateY(-70%);
+  box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.02),
+    0 10px 25px 2px rgba(0, 0, 0, 0.01);
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -10px;
+  .props-left {
+    font-size: $f5;
+    font-weight: bold;
+  }
+  .props-right {
+    font-size: $f6;
+    color: #fff;
+    padding: 3px 20px;
+    border-radius: 20px;
+    background-color: $color-primary;
+  }
+}
+.body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10px;
+  min-height: 2rem;
+  .info-icon {
+    margin-left: 100px;
+  }
+  .list-fit {
+    display: flex;
+    justify-content: space-between;
+  }
+  .content {
+    font-size: $f6;
+  }
+}

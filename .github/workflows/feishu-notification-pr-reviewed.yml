@@ -1,0 +1,27 @@
+name: Feishu Notification Pull Request Reviewed
+
+on:
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  pr-opened:
+    name: Pull Request Reivew Submitted Notification
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Feishu Message
+        env:
+          ACTIONS_FEISHU_TAG: v1.3.1
+          INPUT_WEBHOOK: ${{ secrets.FEISHU_ROBOT_WEBHOOK_URL }}
+          INPUT_MESSAGE_TYPE: post
+          INPUT_TITLE: Pull Request Reviewed
+          INPUT_CONTENT: |
+            @${{ github.event.review.user.login }} has submitted pull request reviews to ${{ github.event.pull_request.title }}
+
+            See: https://github.com/${{ github.repository }}/pull/${{ github.event.pull_request.number }}
+        run: |
+          sudo apt update
+          sudo apt install wget
+          wget -q https://github.com/xiachufang/actions-feishu/releases/download/${{ env.ACTIONS_FEISHU_TAG }}/linux-amd64-actions-feishu.tar.gz
+          tar zxf linux-amd64-actions-feishu.tar.gz feishu
+          ./feishu

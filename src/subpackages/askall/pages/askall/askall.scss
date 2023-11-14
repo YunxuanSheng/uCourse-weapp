@@ -1,0 +1,49 @@
+@import '../../../../utils/_scheme.scss';
+@import '../../../../utils/_mixins.scss';
+
+.askall-page {
+  min-height: 100vh;
+  background-color: $color-bg;
+  @include iPhoneXTabbarHeight(100px);
+  .nav {
+    .see-all {
+      font-size: 18px;
+      color: $color-text-secondary;
+      line-height: 1;
+    }
+  }
+  .course-box {
+    box-sizing: border-box;
+    // @extend .color-course;
+
+    .title {
+      box-sizing: border-box;
+      font-size: $f2;
+      color: #fff;
+      font-weight: bold;
+      padding: 1rem 5%;
+      background-color: $color-primary;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .question-count {
+        font-size: $f5;
+      }
+    }
+    .ask-btn {
+      border: 1px solid #fff;
+      border-radius: 8px;
+      font-size: $f6;
+      color: #fff;
+      padding: 5px 10px 5px 10px;
+      display: inline-block;
+      box-sizing: border-box;
+      text-align: center;
+      min-width: fit-content;
+    }
+
+    .question-list {
+      margin: 25px;
+    }
+  }
+}

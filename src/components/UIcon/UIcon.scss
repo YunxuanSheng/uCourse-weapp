@@ -1,0 +1,396 @@
+@font-face {
+  font-family: 'iconfont'; /* Project id 593232 */
+  src: url('//at.alicdn.com/t/font_593232_slb5s1aa11.woff2?t=1642864975887')
+      format('woff2'),
+    url('//at.alicdn.com/t/font_593232_slb5s1aa11.woff?t=1642864975887')
+      format('woff'),
+    url('//at.alicdn.com/t/font_593232_slb5s1aa11.ttf?t=1642864975887')
+      format('truetype');
+}
+.u-icon {
+  display: inline-block;
+  /* width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden; */
+  &:before {
+    font-family: 'iconfont' !important;
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    text-align: center;
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    /* margin-left: .2em; */
+
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  }
+}
+
+.u-icon-add::before {
+  content: '\e6e0';
+}
+
+.u-icon-addition::before {
+  content: '\e6e1';
+}
+
+.u-icon-addition-o::before {
+  content: '\e6e2';
+}
+
+.u-icon-browse::before {
+  content: '\e6e9';
+}
+
+.u-icon-browse-o::before {
+  content: '\e6ea';
+}
+
+.u-icon-brush::before {
+  content: '\e6ec';
+}
+
+.u-icon-brush-o::before {
+  content: '\e6eb';
+}
+
+.u-icon-clock::before {
+  content: '\e6f1';
+}
+
+.u-icon-clock-o::before {
+  content: '\e6f2';
+}
+
+.u-icon-collection::before {
+  content: '\e6f4';
+}
+
+.u-icon-collection-half::before {
+  content: '\e7e6';
+}
+
+.u-icon-collection-o::before {
+  content: '\e6f5';
+}
+
+.u-icon-coordinates::before {
+  content: '\e6f8';
+}
+
+.u-icon-coordinates-o::before {
+  content: '\e6f9';
+}
+
+.u-icon-createtask::before {
+  content: '\e6fc';
+}
+
+.u-icon-createtask-o::before {
+  content: '\e6fd';
+}
+
+.u-icon-document::before {
+  content: '\e703';
+}
+
+.u-icon-document-o::before {
+  content: '\e702';
+}
+
+.u-icon-dynamic::before {
+  content: '\e704';
+}
+
+.u-icon-dynamic-o::before {
+  content: '\e705';
+}
+
+.u-icon-edit::before {
+  content: '\e633';
+}
+
+.u-icon-editor::before {
+  content: '\e706';
+}
+
+.u-icon-empty::before {
+  content: '\e70b';
+}
+
+.u-icon-empty-o::before {
+  content: '\e70a';
+}
+
+.u-icon-enter::before {
+  content: '\e70c';
+}
+
+.u-icon-enterinto::before {
+  content: '\e70e';
+}
+
+.u-icon-enterinto-o::before {
+  content: '\e70d';
+}
+
+.u-icon-group::before {
+  content: '\e719';
+}
+
+.u-icon-group-o::before {
+  content: '\e718';
+}
+
+.u-icon-home::before {
+  content: '\e71c';
+}
+
+.u-icon-home-o::before {
+  content: '\e71d';
+}
+
+.u-icon-interactive::before {
+  content: '\e720';
+}
+
+.u-icon-interactive-o::before {
+  content: '\e721';
+}
+
+.u-icon-female::before {
+  content: '\e68b';
+  color: #d4237a;
+}
+
+.u-icon-label::before {
+  content: '\e724';
+}
+
+.u-icon-eval::before {
+  content: '\e721';
+}
+
+.u-icon-label-o::before {
+  content: '\e723';
+}
+
+.u-icon-like::before {
+  content: '\e725';
+}
+
+.u-icon-like-o::before {
+  content: '\e726';
+}
+
+.u-icon-male::before {
+  content: '\e68d';
+  color: #1296db;
+}
+
+.u-icon-manage::before {
+  content: '\e72d';
+}
+
+.u-icon-manage-o::before {
+  content: '\e72e';
+}
+
+.u-icon-message:before {
+  content: '\e730';
+}
+
+.u-icon-message-o:before {
+  content: '\e72f';
+}
+
+.u-icon-moment:before {
+  content: '\e6a0';
+}
+
+.u-icon-more:before {
+  content: '\e735';
+}
+
+.u-icon-order:before {
+  content: '\e739';
+}
+
+.u-icon-order-o:before {
+  content: '\e73a';
+}
+
+.u-icon-packup:before {
+  content: '\e782';
+}
+
+.u-icon-people:before {
+  content: '\e73c';
+}
+
+.u-icon-people-o:before {
+  content: '\e73d';
+}
+
+.u-icon-praise:before {
+  content: '\e744';
+}
+
+.u-icon-praise-o:before {
+  content: '\e745';
+}
+
+.u-icon-packup:before {
+  content: '\e782';
+}
+
+.u-icon-prompt:before {
+  content: '\e747';
+}
+
+.u-icon-question:before {
+  content: '\e78b';
+}
+
+.u-icon-refresh:before {
+  content: '\e74c';
+}
+
+.u-icon-return:before {
+  content: '\e74f';
+}
+
+.u-icon-right:before {
+  content: '\e750';
+}
+
+.u-icon-search-o:before {
+  content: '\e77c';
+}
+
+.u-icon-search:before {
+  content: '\e77d';
+}
+
+.u-icon-send:before {
+  content: '\e754';
+}
+
+.u-icon-setup:before {
+  content: '\e757';
+}
+
+.u-icon-share:before {
+  content: '\e759';
+}
+
+.u-icon-share-o:before {
+  content: '\e75a';
+}
+
+.u-icon-tab:before {
+  content: '\e77e';
+}
+
+.u-icon-time:before {
+  content: '\e76d';
+}
+
+.u-icon-time-o:before {
+  content: '\e76e';
+}
+
+.u-icon-translate:before {
+  content: '\e8c4';
+}
+
+.u-icon-trash:before {
+  content: '\e772';
+}
+
+.u-icon-trash-o:before {
+  content: '\e771';
+}
+
+.u-icon-unfold:before {
+  content: '\e783';
+}
+
+.u-icon-view::before {
+  content: '\e637';
+}
+
+.u-icon-view-o::before {
+  content: '\e672';
+}
+
+.u-icon-verified::before {
+  content: '\e6ca';
+}
+
+.u-icon-verified-o::before {
+  content: '\e6c4';
+}
+
+.u-icon-wechat::before {
+  content: '\e7e5';
+}
+
+.u-icon-crown::before {
+  content: '\e639';
+}
+
+.u-icon-orange::before {
+  content: '\e601';
+}
+
+.u-icon-thumb::before {
+  content: '\e602';
+}
+
+.u-icon-reply::before {
+  content: '\e603';
+}
+
+.u-icon-spin::before {
+  content: '█';
+  border-radius: 50%;
+  // background-color: #fff;
+  animation: spin-bounce 1s 0s ease-in-out infinite;
+  overflow: hidden;
+  // vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes spin-bounce {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}

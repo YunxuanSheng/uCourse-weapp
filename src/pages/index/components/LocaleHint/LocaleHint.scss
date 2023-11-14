@@ -1,0 +1,17 @@
+@import '../../../../utils/scheme.scss';
+
+.hint-comp {
+  background-color: $color-primary;
+  font-size: $f5;
+  padding: 25px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-around;
+}
+.btn-text {
+  color: #fff;
+}

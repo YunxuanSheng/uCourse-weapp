@@ -1,0 +1,31 @@
+name: Feishu Notification Push
+
+on:
+    push:
+        branches:
+          - "*"
+
+jobs:
+    pr-opened:
+        name: Push Notification
+        if: ${{ github.event_name == 'push' }}
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Send Feishu Message
+                env:
+                    ACTIONS_FEISHU_TAG: v1.3.1
+                    INPUT_WEBHOOK: ${{ secrets.FEISHU_ROBOT_WEBHOOK_URL }}
+                    INPUT_MESSAGE_TYPE: post
+                    INPUT_TITLE: New Push on ${{ github.repository }}
+                    INPUT_CONTENT: |
+                        @${{ github.event.pusher.name }} pushed new commit: 
+
+                        ${{ github.event.head_commit.message }} 
+
+                        See: ${{ github.event.head_commit.url }}
+                run: |
+                    sudo apt update
+                    sudo apt install wget
+                    wget -q https://github.com/xiachufang/actions-feishu/releases/download/${{ env.ACTIONS_FEISHU_TAG }}/linux-amd64-actions-feishu.tar.gz
+                    tar zxf linux-amd64-actions-feishu.tar.gz feishu
+                    ./feishu

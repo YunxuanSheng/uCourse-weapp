@@ -1,0 +1,223 @@
+@import '../../../../utils/_scheme.scss';
+@import '../../../../utils/_mixins.scss';
+
+view {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+
+.discover-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $color-bg;
+  .scroll-nav {
+    width: 100%;
+    ::-webkit-scrollbar {
+      /* hide scrollbar*/
+      width: 0;
+      height: 0;
+      color: transparent;
+      display: none;
+    }
+
+    .nav {
+      display: inline-flex;
+      top: 50%;
+      transform: translateY(-50%);
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      // margin: 0 15px;
+      padding: 0 15px;
+      height: 90%;
+      font-size: $f5;
+      color: $color-text-secondary;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      &:after {
+        transition: all 0.3s ease-in-out;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 0;
+        height: 100%;
+        border-bottom: 5px solid $color-primary;
+      }
+    }
+    .active {
+      color: $color-primary;
+      font-weight: bold;
+      position: relative;
+      &:after {
+        width: 100%;
+        left: 0;
+        transition-delay: 0.1s;
+      }
+      & ~ .nav:after {
+        left: 0;
+      }
+    }
+  }
+
+  .swiper-container {
+    .swiper-item {
+      &-scroll-view {
+      }
+    }
+  }
+}
+
+.eval-card {
+  background: #fff;
+  width: 750px;
+  box-sizing: border-box;
+  padding: 25px;
+  margin-bottom: 15px;
+  &:active {
+    opacity: 0.6;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    &-left {
+      display: flex;
+      align-items: center;
+      .nickname, .course-code {
+        color: $color-text-secondary;
+        font-size: $f7;
+      }
+      .nickname {
+        margin-left: 15px;
+      }
+    }
+    &-right {
+      display: flex;
+      align-items: center;
+      .school {
+        opacity: 0.5;
+        font-size: $f7;
+        // color: #fff;
+        // color: $color-text-placeholder;
+        padding: 0 10px;
+        border-radius: 5px;
+        margin: 10px;
+        margin-right: 15px;
+      }
+      @extend .color-course-tag;
+    }
+  }
+  .content {
+    color: $color-text-long;
+    line-height: 1.5;
+    &-title {
+      font-size: $f5;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    &-short {
+      font-size: $f6;
+      @include ellipsis-ln(3);
+    }
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-text-secondary;
+    font-size: $f7;
+    margin-top: 25px;
+    .footer-right {
+      color: $color-text-placeholder;
+    }
+  }
+}
+
+.course-card {
+  background: #fff;
+  width: 750px;
+  box-sizing: border-box;
+  padding: 25px;
+  margin-bottom: 15px;
+  &:active {
+    opacity: 0.6;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    &-left {
+      display: flex;
+      align-items: center;
+      color: $color-text-secondary;
+      font-size: $f7;
+    }
+    &-right {
+      display: flex;
+      align-items: center;
+      .school {
+        opacity: 0.5;
+        font-size: $f7;
+        // color: #fff;
+        // color: $color-text-placeholder;
+        padding: 0 10px;
+        border-radius: 5px;
+        margin: 10px;
+        margin-right: 15px;
+      }
+      @extend .color-course-tag;
+    }
+  }
+  .content {
+    color: $color-text-long;
+    line-height: 1.5;
+    &-title {
+      font-size: $f5;
+      font-weight: bold;
+      margin: 10px 0;
+      // max-width: 600px;
+    }
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-text-secondary;
+    font-size: $f7;
+    margin-top: 25px;
+    position: relative;
+    .footer-right {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-size: $f2;
+      line-height: 1;
+      // color: $color-text-long;
+      color: $color-primary;
+      font-weight: bold;
+    }
+  }
+}
+
+.refresh-btn {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  .refresh-icon {
+    font-size: $f2;
+  }
+  button {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+    &:active {
+      box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+        0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.4);
+      transition: all 0.2s ease;
+    }
+  }
+}

@@ -1,0 +1,107 @@
+@import '../../../../../../utils/mixins.scss';
+@import '../../../../../../utils/scheme.scss';
+
+.eval-container-skeleton {
+  box-sizing: border-box;
+  background-color: #fff;
+  // min-height: 100vh;
+  padding: 25px;
+  .header {
+    display: flex;
+    font-size: $f6;
+    .avatar-container {
+      border-radius: 50%;
+      overflow: hidden;
+      height: 64px;
+      width: 64px;
+    }
+    .user-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: 10px;
+      .nickname {
+        margin-right: 10px;
+        height: $f6;
+        width: 4 * $f6;
+      }
+      .intro {
+        height: $f6;
+        width: 10 * $f6;
+      }
+    }
+  }
+  .eval-rate {
+    margin: 25px 0;
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.08),
+      0 10px 25px 2px rgba(0, 0, 0, 0.04);
+    font-size: $f5;
+    line-height: 1.5;
+    color: $color-text-secondary;
+    .left {
+      flex: 1;
+      .rate-container {
+        display: flex;
+        align-items: center;
+        height: $f5 * 2;
+        .rate-name {
+          min-width: 120px;
+          margin-right: 15px;
+        }
+      }
+    }
+    .right {
+      width: 300px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      font-size: $f1;
+      color: $color-text-long;
+      font-weight: bold;
+      .score-comp {
+        .comp {
+          font-size: $f5;
+          font-weight: 400;
+          color: $color-text-secondary;
+        }
+      }
+    }
+  }
+  .content {
+    padding: 20px 0;
+    text-rendering: optimizelegibility;
+    line-height: 1.75;
+    // text-align: justify;
+    color: $color-text-long;
+    font-size: $f5;
+    word-wrap: break-word;
+  }
+  .footer {
+    font-size: $f6;
+    color: $color-text-secondary;
+    padding-bottom: 80px;
+  }
+}
+
+.skeleton-loading {
+  @include skeletonLoading();
+}
+
+.row {
+  display: flex;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    height: 1em;
+    margin: 0.75/2 * 1em 0;
+    width: 100%/12 * $i;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+}

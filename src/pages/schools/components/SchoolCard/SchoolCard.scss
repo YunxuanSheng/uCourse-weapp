@@ -1,0 +1,52 @@
+@import '../../../../utils/scheme.scss';
+
+.school-card {
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.08),
+    0 10px 25px 2px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+  &:active {
+    transition: transform 0.1s ease-in-out;
+    transform: scale3d(0.96, 0.96, 1);
+  }
+}
+
+.title {
+  font-size: $f4;
+  font-weight: bold;
+  margin: 10px 0;
+  line-height: 1.25;
+  // letter-spacing: -0.3px;
+}
+
+.field {
+  font-weight: bold;
+  font-style: italic;
+  color: $color-text-long;
+  // &:before {
+  //   content: '-';
+  // }
+}
+
+.flag {
+  width: 30px;
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.country {
+  font-size: $f7;
+  display: flex;
+  align-items: center;
+  &-text {
+    margin-left: 10px;
+  }
+}
+
+.list {
+  font-size: $f6;
+}

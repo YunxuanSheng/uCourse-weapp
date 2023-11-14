@@ -1,0 +1,20 @@
+@import '../../utils/scheme.scss';
+
+.index {
+  min-height: 100vh;
+  background-color: $color-bg;
+  overflow: hidden;
+  .footer {
+    text-align: center;
+    font-size: $f7;
+    color: $color-text-placeholder;
+  }
+}
+
+::-webkit-scrollbar {
+  /* hide scrollbar*/
+  width: 0;
+  height: 0;
+  color: transparent;
+  display: none;
+}

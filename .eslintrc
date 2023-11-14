@@ -1,0 +1,12 @@
+{
+  "extends": ["taro", "plugin:prettier/recommended"],
+  "rules": {
+    "no-unused-vars": ["error", { "varsIgnorePattern": "Taro" }],
+    "prettier/prettier": "error"
+  },
+  "globals": {
+    "wx": true,
+    "API_GATEWAY": true,
+  },
+  "parser": "babel-eslint"
+}

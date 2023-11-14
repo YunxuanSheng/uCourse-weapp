@@ -1,0 +1,11 @@
+@import '../../../../utils/mixins.scss';
+
+.topic-page {
+  @include iPhoneXTabbarHeight(150px);
+}
+
+.tab-container {
+  position: sticky;
+  position: -webkit-sticky;
+  z-index: 10;
+}

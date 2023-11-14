@@ -1,0 +1,32 @@
+@import '../../../../utils/scheme.scss';
+@import '../../../../utils/mixins.scss';
+@import '~taro-ui/dist/style/components/input.scss';
+@import '~taro-ui/dist/style/components/icon.scss';
+@import '~taro-ui/dist/style/components/button.scss';
+@import '~taro-ui/dist/style/components/loading.scss';
+
+.cards-page {
+  min-height: 100vh;
+  background-color: $color-bg;
+}
+
+.contain-box {
+  padding: 50px;
+  .btn-box {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    button {
+      margin: 0 10px;
+    }
+  }
+}
+
+.at-button--primary {
+  border: 1px solid #f19c34;
+  background: #f19c34;
+}
+
+// .at-input__input {
+//   background-color: #ffffff;
+// }

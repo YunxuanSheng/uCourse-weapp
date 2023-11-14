@@ -1,0 +1,28 @@
+@import '../../../../utils/scheme.scss';
+@import '../../../../utils/mixins.scss';
+
+.panel {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  .item {
+    width: 33.33%;
+    height: 200px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+    position: relative;
+    @include ripple();
+    .icon {
+      width: 64px;
+      height: 64px;
+    }
+    .name {
+      font-size: $f6;
+    }
+  }
+}

@@ -1,0 +1,183 @@
+@import '../../../../utils/scheme.scss';
+@import '../../../../utils/mixins.scss';
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.header {
+  position: sticky;
+  z-index: 2;
+  @include frost();
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.timetable-comp-default {
+  animation: gradient 10s ease infinite;
+  background: linear-gradient(
+    -45deg,
+    rgba(238, 119, 82, 0.5),
+    rgba(231, 60, 126, 0.5),
+    rgba(35, 166, 213, 0.5),
+    rgba(35, 213, 171, 0.5),
+    rgba(255, 152, 0, 0.5)
+  );
+  background-size: 400% 400%;
+}
+
+.timetable-comp {
+  position: fixed;
+  width: 750px;
+  max-height: 100vh;
+  overflow: scroll;
+  position: relative;
+  
+  animation: gradient 10s ease infinite;
+  // background: linear-gradient(
+  //   -45deg,
+  //   rgba(238, 119, 82, 0.5),
+  //   rgba(231, 60, 126, 0.5),
+  //   rgba(35, 166, 213, 0.5),
+  //   rgba(35, 213, 171, 0.5),
+  //   rgba(255, 152, 0, 0.5)
+  // );
+  // background-size: 100% 100%;
+  font-size: $f6;
+  .body {
+    display: flex;
+    .left-column {
+      @extend .header;
+      z-index: 3;
+      left: 0;
+      background: rgba(255, 255, 255, 0.3);
+      display: flex;
+      flex-direction: column;
+      width: 50px;
+      font-size: $f7;
+      .month-indicator {
+        @extend .header;
+        top: 0;
+        left: 0;
+        font-size: $f8;
+        width: 50px;
+        height: 75px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .time-indicator {
+        width: 50px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+      }
+    }
+    .content {
+      display: flex;
+      flex-direction: row;
+      .current-timeline {
+        z-index: 15;
+        position: absolute;
+        border-bottom: 1px solid $color-primary;
+      }
+      .column {
+        width: 200px;
+        .week-indicator {
+          @extend .header;
+          top: 0px;
+          width: 200px;
+          height: 75px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .date {
+            font-size: $f8;
+          }
+        }
+        .today {
+          font-weight: bold;
+        }
+        position: relative;
+        .item {
+          box-sizing: border-box;
+          overflow: hidden;
+          width: 190px;
+          margin: 0 5px;
+          padding: 10px;
+          border-radius: 10px;
+          font-size: $f7;
+          word-wrap: break-word;
+          position: absolute;
+          background: rgba(255, 255, 255, 0.5);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          &:active {
+            transition: transform 0.1s ease-in-out;
+            transform: scale3d(0.96, 0.96, 1);
+          }
+          .module {
+            font-weight: bold;
+          }
+          .type {
+            font-size: $f8;
+          }
+          .room {
+            font-size: $f8;
+          }
+        }
+        .performing {
+          animation: gradient 10s ease infinite;
+          background: linear-gradient(
+            -45deg,
+            rgba(238, 119, 82, 0.5),
+            rgba(231, 60, 126, 0.5),
+            rgba(35, 166, 213, 0.5),
+            rgba(35, 213, 171, 0.5),
+            rgba(255, 152, 0, 0.5)
+          );
+          background-size: 400% 400%;
+        }
+      }
+    }
+  }
+}
+
+// .fixed-btns {
+//   position: fixed;
+//   z-index: 3;
+//   bottom: 50px;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   display: flex;
+//   opacity: 0.5;
+//   .btn {
+//     background-color: $color-tertiary;
+//     padding: 10px;
+//     margin: 0 50px;
+//     width: 50px;
+//     font-size: $f2;
+//     color: #fff;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+//   .left {
+//     border-radius: 50% 0 0 50%;
+//   }
+//   .right {
+//     border-radius: 0 50% 50% 0;
+//   }
+// }

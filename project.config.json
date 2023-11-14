@@ -1,0 +1,363 @@
+{
+    "description": "项目配置文件",
+    "packOptions": {
+        "ignore": []
+    },
+    "setting": {
+        "urlCheck": false,
+        "es6": false,
+        "enhance": false,
+        "postcss": false,
+        "preloadBackgroundData": false,
+        "minified": false,
+        "newFeature": true,
+        "coverView": true,
+        "nodeModules": false,
+        "autoAudits": false,
+        "showShadowRootInWxmlPanel": true,
+        "scopeDataCheck": false,
+        "uglifyFileName": false,
+        "checkInvalidKey": true,
+        "checkSiteMap": true,
+        "uploadWithSourceMap": true,
+        "compileHotReLoad": false,
+        "lazyloadPlaceholderEnable": false,
+        "useMultiFrameRuntime": true,
+        "useApiHook": true,
+        "useApiHostProcess": true,
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
+        },
+        "enableEngineNative": false,
+        "useIsolateContext": true,
+        "userConfirmedBundleSwitch": false,
+        "packNpmManually": false,
+        "packNpmRelationList": [],
+        "minifyWXSS": true,
+        "showES6CompileOption": false,
+        "minifyWXML": true
+    },
+    "compileType": "miniprogram",
+    "libVersion": "2.19.4",
+    "appid": "wxf91a3d7a60c2de7e",
+    "projectname": "uCourse-weapp",
+    "miniprogramRoot": "dist/",
+    "cloudfunctionTemplateRoot": "",
+    "watchOptions": {
+        "ignore": []
+    },
+    "debugOptions": {
+        "hidedInDevtools": []
+    },
+    "scripts": {},
+    "simulatorType": "wechat",
+    "simulatorPluginLibVersion": {},
+    "condition": {
+        "search": {
+            "list": []
+        },
+        "conversation": {
+            "list": []
+        },
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "id": 0,
+                    "name": "我的",
+                    "pathName": "pages/me/me",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 1,
+                    "name": "个人主页",
+                    "pathName": "pages/profile/profile",
+                    "query": ""
+                },
+                {
+                    "id": 2,
+                    "name": "用户主页",
+                    "pathName": "pages/profile/profile",
+                    "query": "id=1"
+                },
+                {
+                    "id": -1,
+                    "name": "首页",
+                    "pathName": "pages/index/index",
+                    "query": ""
+                },
+                {
+                    "id": 4,
+                    "name": "课程",
+                    "pathName": "pages/course/course",
+                    "query": "title=Computer Fundamentals&code=COMP1036&school_code=CSC-CS"
+                },
+                {
+                    "id": 5,
+                    "name": "新评测",
+                    "pathName": "pages/eval-new/eval-new",
+                    "query": "code=CHEE2027",
+                    "scene": null
+                },
+                {
+                    "id": 6,
+                    "name": "评测",
+                    "pathName": "pages/eval/eval",
+                    "query": "title=Computer Fundamentals&id=4",
+                    "scene": null
+                },
+                {
+                    "id": 7,
+                    "name": "编辑资料",
+                    "pathName": "subpackages/profile-edit/pages/profile-edit/profile-edit",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "编辑专业",
+                    "pathName": "subpackages/profile-edit/pages/profile-edit-major/profile-edit-major",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "编辑学号",
+                    "pathName": "subpackages/profile-edit/pages/profile-edit-id/profile-edit-id",
+                    "query": ""
+                },
+                {
+                    "id": 10,
+                    "name": "编辑邮箱",
+                    "pathName": "subpackages/profile-edit/pages/profile-edit-email/profile-edit-email",
+                    "query": ""
+                },
+                {
+                    "id": 11,
+                    "name": "评论列表",
+                    "pathName": "pages/comments/comments",
+                    "query": "evalId=5&count=11"
+                },
+                {
+                    "id": 12,
+                    "name": "回复详情",
+                    "pathName": "pages/comment/comment",
+                    "query": "id=10&evalId=5"
+                },
+                {
+                    "id": 13,
+                    "name": "课程详情",
+                    "pathName": "pages/course-detail/course-detail",
+                    "query": "code=COMP1036"
+                },
+                {
+                    "id": 14,
+                    "name": "web-view-page",
+                    "pathName": "pages/web-view-page/web-view-page",
+                    "query": "url=https://mp.weixin.qq.com/s/Dzzsa4wFnYYCg6QNZ0C-wg",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "搜索",
+                    "pathName": "pages/search/search",
+                    "query": ""
+                },
+                {
+                    "id": 16,
+                    "name": "模拟更新",
+                    "pathName": "pages/index/index",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "发现更多",
+                    "pathName": "pages/discover/discover",
+                    "query": ""
+                },
+                {
+                    "id": 18,
+                    "name": "md",
+                    "pathName": "pages/hint-md/hint-md",
+                    "query": "id=41",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "我的收藏",
+                    "pathName": "pages/fav/fav",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "搜索CELE",
+                    "pathName": "pages/search/search",
+                    "query": "schoolCode=CELE&level=0"
+                },
+                {
+                    "id": -1,
+                    "name": "hint-md",
+                    "pathName": "pages/hint-md/hint-md",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "设置",
+                    "pathName": "pages/settings/settings",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "草稿箱",
+                    "pathName": "pages/drafts/drafts",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "地图",
+                    "pathName": "pages/qmap/qmap",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "扫码进入首页",
+                    "pathName": "pages/index/index",
+                    "query": "",
+                    "scene": "1011"
+                },
+                {
+                    "id": -1,
+                    "name": "语言设置",
+                    "pathName": "pages/settings-language/settings-language",
+                    "query": ""
+                },
+                {
+                    "id": 27,
+                    "name": "话题",
+                    "pathName": "subpackages/topic/pages/topic/topic",
+                    "query": "id=1",
+                    "scene": null
+                },
+                {
+                    "id": 28,
+                    "name": "话题添加课程",
+                    "pathName": "subpackages/topic/pages/topic-new-course/topic-new-course",
+                    "query": "topicId=1",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "分享",
+                    "pathName": "pages/share/share",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "交换学校",
+                    "pathName": "pages/schools/schools",
+                    "query": ""
+                },
+                {
+                    "id": 31,
+                    "name": "学校页面",
+                    "pathName": "subpackages/exchange/pages/school/school",
+                    "query": "id=1",
+                    "scene": null
+                },
+                {
+                    "id": 32,
+                    "name": "新学校评测",
+                    "pathName": "subpackages/exchange/pages/school-eval-new/school-eval-new",
+                    "query": "schoolId=2",
+                    "scene": null
+                },
+                {
+                    "id": 33,
+                    "name": "学校评测详情",
+                    "pathName": "subpackages/exchange/pages/eval/eval",
+                    "query": "id=2",
+                    "scene": null
+                },
+                {
+                    "id": 34,
+                    "name": "课表",
+                    "pathName": "pages/timetable/timetable",
+                    "query": "",
+                    "scene": 1011
+                },
+                {
+                    "id": 35,
+                    "name": "课表Activity",
+                    "pathName": "subpackages/timetable/pages/activity/activity",
+                    "query": "name=CELEN051/S1 - Group A/23&month=7&mode=old",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "课表Activity搜索",
+                    "pathName": "subpackages/timetable/pages/activity-search/activity-search",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "课表设置",
+                    "pathName": "subpackages/settings/pages/settings-timetable/settings-timetable",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "课表pdf",
+                    "pathName": "subpackages/timetable/pages/export-pdf/export-pdf",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "课表ical",
+                    "pathName": "subpackages/timetable/pages/export-ical/export-ical",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "课表微信提醒",
+                    "pathName": "subpackages/timetable/pages/wechat-reminder/wechat-reminder",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "课表activities",
+                    "pathName": "subpackages/timetable/pages/activities/activities",
+                    "query": "moduleCode=COMP1036",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "pages/cards/cards",
+                    "pathName": "pages/cards/cards",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": 43,
+                    "name": "卡券",
+                    "pathName": "subpackages/cards/pages/cards/cards",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

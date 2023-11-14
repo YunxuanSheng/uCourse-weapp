@@ -1,0 +1,26 @@
+.avatar-container {
+  // border: 1px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 1em;
+  width: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-mini {
+    height: 64px;
+    width: 64px;
+  }
+  &-small {
+    height: 128px;
+    width: 128px;
+  }
+  &-medium {
+    height: 192px;
+    width: 192px;
+  }
+  &-large {
+    height: 256px;
+    width: 256px;
+  }
+}

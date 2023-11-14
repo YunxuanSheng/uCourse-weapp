@@ -1,0 +1,68 @@
+@import '../../utils/scheme.scss';
+@import '../UIcon/UIcon.scss';
+@import '../../utils/mixins.scss';
+
+.rate-comp {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  font-weight: normal;
+  font-style: normal;
+  .hide-input {
+    display: none;
+  }
+  .star {
+    display: inline-flex;
+    align-items: center;
+    color: #e9e9e9;
+    position: relative;
+  }
+  .full {
+    // color: $color-primary;
+    position: relative;
+    &:before {
+      @extend .u-icon;
+      display: block;
+      z-index: 1;
+      position: absolute;
+      color: $color-primary;
+      content: '\e6f4';
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+      @include flex-center-y();
+      transform: translate3d(0, -1px, 0);
+    }
+  }
+  .half {
+    position: relative;
+    &:before {
+      @extend .u-icon;
+      display: block;
+      z-index: 1;
+      position: absolute;
+      color: $color-primary;
+      content: '\e6f4';
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      left: 0;
+      right: 0;
+      width: 50%;
+      overflow: hidden;
+      @include flex-center-y();
+      transform: translate3d(0, -1px, 0);
+    }
+  }
+  .text {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 15px;
+    font-size: $f5;
+    width: $f5 * 3;
+    color: $color-text-secondary;
+  }
+}

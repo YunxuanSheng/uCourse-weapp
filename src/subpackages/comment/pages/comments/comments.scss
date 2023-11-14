@@ -1,0 +1,9 @@
+@import '../../../../utils/scheme.scss';
+
+.comments-page {
+  // background-color: $color-bg;
+  display: flex;
+  flex-direction: column;
+  font-size: $f5;
+  padding-bottom: 80px;
+}

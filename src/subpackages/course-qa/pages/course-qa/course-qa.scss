@@ -1,0 +1,32 @@
+@import '../../../../utils/_scheme.scss';
+@import '../../../../utils/_mixins.scss';
+
+.course-qa-page {
+  min-height: 100vh;
+  background-color: $color-bg;
+  @include iPhoneXTabbarHeight(100px);
+  .tabbar {
+    display: flex;
+    justify-content: center;
+    .bar, .bar-active {
+      margin: 8px 16px;
+      font-size: $f5;
+    }
+    .bar-active {
+      color: $color-primary;
+      border-bottom: 5px solid $color-primary;
+    }
+  }
+  .reply-card {
+    margin: 20px 30px;
+    background-color: #fff;
+    border-radius: 20px;
+    .box {
+      height: 10px;
+      background-color: $color-line;
+    }
+    .question {
+      margin: 0;
+    }
+  }
+}
